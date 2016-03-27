@@ -19,9 +19,9 @@ var modulesDirectories = [
   'bower_components'
 ];
 
-var isProductionBuild = process.env.NODE_ENV === 'production';
-
 module.exports = {
+  debug: true,
+  devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client?reload=true',
     path.join(__dirname, 'src/main.js')
