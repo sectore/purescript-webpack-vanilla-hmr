@@ -1,6 +1,6 @@
 # purescript-webpack-vanilla-hmr
 
-Simple + fast build of **[PureScript](purescript.org)** with **[webpack](https://webpack.github.io)** and **[vanilla HMR](https://webpack.github.io/docs/hot-module-replacement.html)**. No [Pulp](https://github.com/bodil/pulp), no [Gulp](http://gulpjs.com/) or anything else - just [webpack](https://webpack.github.io/).
+Simple + fast build of **[PureScript](purescript.org)** with **[webpack](https://webpack.github.io)** and **[Vanilla Hot Module Replacement (HMR)](https://webpack.github.io/docs/hot-module-replacement.html)**. No [Pulp](https://github.com/bodil/pulp), no [Gulp](http://gulpjs.com/) or anything else - just [webpack](https://webpack.github.io/).
 
 ![screenshot](./ps_hmr.gif)
 
