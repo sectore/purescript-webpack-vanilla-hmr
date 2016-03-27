@@ -1,0 +1,44 @@
+{
+  "name": "purescript-webpack-hmr",
+  "version": "0.0.1",
+  "description": "PureScript + Vanilla HMR",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower cache clean && ./node_modules/.bin/bower install",
+    "start": "npm run server:dev",
+    "server:dev": "./node_modules/.bin/webpack-dev-server --hot --inline --progress --profile --colors --watch --display-error-details --display-cached  --content-base src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sectore/pureScript-webpack-hmr.git"
+  },
+  "keywords": [
+    "PureScript",
+    "Webpack"
+  ],
+  "author": "Jens Krause",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sectore/pureScript-webpack-hmr/issues"
+  },
+  "homepage": "https://github.com/sectore/pureScript-webpack-hmr#readme",
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "express": "^4.13.4",
+    "html-webpack-plugin": "^2.14.0",
+    "purescript": "^0.8.3",
+    "purescript-psa": "^0.3.5",
+    "purescript-webpack-plugin": "^0.2.0",
+    "purs-loader": "^0.6.0",
+    "rimraf": "^2.5.2",
+    "source-map-loader": "^0.1.5",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-hot-middleware": "^2.10.0"
+  }
+}

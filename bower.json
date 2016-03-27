@@ -1,0 +1,27 @@
+{
+  "name": "purescript-webpack-hmr",
+  "description": "PureScript + Vanilla HMR",
+  "main": "index.js",
+  "authors": [
+    "Jens Krause - jkrause.io"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "PureScript",
+    "Webpack"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "purescript-pux": "^1.0.0"
+  }
+}
