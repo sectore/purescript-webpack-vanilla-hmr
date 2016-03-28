@@ -16,7 +16,7 @@ Why not the using the same stuff for building PureScript application today?
 npm i
 npm start
 ```
-Open http://localhost:8080/
+Open http://localhost:3000/
 
 ## Acknowledge
 
@@ -24,7 +24,8 @@ Open http://localhost:8080/
 - ["Hot Reloading in React or, an Ode to Accidental Complexity"](https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf#.vnlkto5p1) by Dan Abramov
 - Redux PR 1455 ["RFC: remove React Transform from examples"](https://github.com/reactjs/redux/pull/1455)
 - [purs-loader](https://github.com/ethul/purs-loader),  [purescript-webpack-plugin](https://www.npmjs.com/package/purescript-webpack-plugin) and [purescript-webpack-example](https://github.com/ethul/purescript-webpack-example/blob/master/webpack.config.js) by [ethul](https://github.com/ethul)
-- [A boilerplate for running a Webpack workflow in Node express](https://github.com/christianalfoni/webpack-express-boilerplate) by [Christian Alfoni](https://github.com/christianalfoni)
+- [Webpack and React tutorial - Taking the next steps](http://www.christianalfoni.com/articles/2015_10_01_Taking-the-next-step-with-react-and-webpack) by [Christian Alfoni](https://github.com/christianalfoni)
+- [An Angular 2 Starter kit featuring Angular 2](https://github.com/AngularClass/angular2-webpack-starter) by [AngularClass](https://github.com/AngularClass)
 - Counter Example of [Pux](https://github.com/alexmingoia/purescript-pux), an awesome PureScript FRP interface to React by [Alex Mingoia](https://github.com/alexmingoia)
 
 ### License
