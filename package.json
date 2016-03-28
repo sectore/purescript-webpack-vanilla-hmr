@@ -6,6 +6,7 @@
   "scripts": {
     "postinstall": "./node_modules/.bin/bower cache clean && ./node_modules/.bin/bower install",
     "start": "npm run server:dev",
+    "server:bu": "./node_modules/.bin/webpack-dev-server --hot --inline --progress --profile --colors --watch --display-error-details --display-cached  --content-base src/ --sourceMap --devtool inline-source-map",
     "server:dev": "./node_modules/.bin/webpack-dev-server --hot --config webpack.config.js --inline --progress --profile --colors --watch --display-error-details --display-cached --content-base src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
