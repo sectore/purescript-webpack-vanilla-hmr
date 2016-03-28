@@ -1,10 +1,17 @@
 module App where
 
-import App.Counter (update, view)
-import Prelude(bind, return)
+import Control.Monad.Eff (Eff)
+import Control.Monad.Eff.Exception (EXCEPTION)
 import Control.Monad.Eff
-import Pux (start, fromSimple, renderToDOM)
+import DOM (DOM)
+import Signal.Channel (CHANNEL)
+import Prelude(bind, return)
+import Pux (App, start, fromSimple, renderToDOM)
+import App.Counter (State, Action, update, view)
 
+type AppEffects eff = (err :: EXCEPTION, channel :: CHANNEL | eff)
+
+main :: State -> Eff (AppEffects (dom :: DOM)) (App State Action)
 main state = do
   app <- start
     { initialState: state
