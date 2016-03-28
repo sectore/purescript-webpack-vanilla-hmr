@@ -9,8 +9,6 @@ module.exports = {
   debug: true,
   devtool: 'cheap-module-eval-source-map',
   entry: [
-    // path.join(__dirname, 'output/App/index.js')
-    // path.join(__dirname, 'src/App.purs')
     path.join(__dirname, 'src/main.js')
   ],
   resolve: {
@@ -51,6 +49,9 @@ module.exports = {
       filename: '[file].map',
       moduleFilenameTemplate: '[absolute-resource-path]',
       fallbackModuleFilenameTemplate: '[absolute-resource-path]'
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
     })
   ],
   module: {
