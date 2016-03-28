@@ -6,7 +6,9 @@ Simple + fast build of **[PureScript](purescript.org)** with **[webpack](https:/
 
 ## Why?
 
-"I strongly suggest you to consider using vanilla HMR API instead of React Hot Loader, React Transform, or other similar projects. It’s just so much simpler—at least, it is today." _Quote by Dan Abranov (Creator of [Redux](redux.js.org), [React Hot Loader](https://github.com/gaearon/react-hot-loader) etc.)_
+> "I strongly suggest you to consider using vanilla HMR API instead of React Hot Loader, React Transform, or other similar projects. It’s just so much simpler—at least, it is today."
+
+_Quote by Dan Abranov (Creator of [Redux](redux.js.org), [React Hot Loader](https://github.com/gaearon/react-hot-loader) etc.)_
 
 Why not the using the same stuff for building PureScript application today?
 
