@@ -9,6 +9,8 @@ module.exports = {
   debug: true,
   devtool: 'cheap-module-eval-source-map',
   entry: [
+    // path.join(__dirname, 'output/App/index.js')
+    // path.join(__dirname, 'src/App.purs')
     path.join(__dirname, 'src/main.js')
   ],
   resolve: {
@@ -16,14 +18,12 @@ module.exports = {
       'node_modules',
       'bower_components'
     ],
-    extensions: [ '', '.js', '.purs'],
-    root: path.join(__dirname, 'src'),
+    extensions: [ '', '.js', '.purs']
   },
   output: {
     path: path.join(__dirname, '/dist/'),
     pathinfo: true,
     filename: '[name].js',
-    sourceMapFilename: '[name].map',
     publicPath: '/'
   },
   plugins: [
@@ -46,13 +46,16 @@ module.exports = {
       inject: 'body',
       filename: 'index.html'
     }),
-    new webpack.optimize.OccurenceOrderPlugin(true)
+    new webpack.optimize.OccurenceOrderPlugin(true),
+    new webpack.SourceMapDevToolPlugin({
+      filename: '[file].map',
+      moduleFilenameTemplate: '[absolute-resource-path]',
+      fallbackModuleFilenameTemplate: '[absolute-resource-path]'
+    })
   ],
   module: {
-    preLoaders: [
-      { test: /\.js$/, loader: 'source-map-loader', exclude: /node_modules|bower_components/ },
-    ],
     loaders: [
+      { test: /\.js$/, loader: 'source-map-loader', exclude: /node_modules|bower_components/ },
       { test: /\.purs$/, loader: 'purs-loader' }
     ]
   },
