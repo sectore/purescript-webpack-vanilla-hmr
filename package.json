@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "./node_modules/.bin/bower cache clean && ./node_modules/.bin/bower install",
     "start": "npm run server:dev",
-    "server:dev": "./node_modules/.bin/webpack-dev-server --hot --config webpack.config.js --inline --progress --profile --colors --watch --display-error-details --display-cached --content-base src/",
+    "server:dev": "rimraf output && ./node_modules/.bin/webpack-dev-server --hot --config webpack.config.js --inline --progress --profile --colors --watch --display-error-details --display-cached --content-base src/",
     "build": "rimraf dist && set NODE_ENV=production && ./node_modules/.bin/webpack --config ./webpack.production.config.js --progress --profile --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
