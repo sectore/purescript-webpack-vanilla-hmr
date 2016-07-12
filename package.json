@@ -26,16 +26,15 @@
   },
   "homepage": "https://github.com/sectore/purescript-webpack-vanilla-hmr#readme",
   "dependencies": {
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1"
   },
   "devDependencies": {
     "bower": "^1.7.7",
-    "html-webpack-plugin": "^2.14.0",
-    "purescript": "^0.8.3",
-    "purescript-psa": "^0.3.5",
-    "purescript-webpack-plugin": "^0.2.0",
-    "purs-loader": "^0.6.0",
+    "html-webpack-plugin": "^2.22.0",
+    "purescript": "^0.9.1",
+    "purescript-psa": "^0.3.8",
+    "purs-loader": "^2.0.0-rc.1",
     "rimraf": "^2.5.2",
     "source-map-loader": "^0.1.5",
     "webpack": "^1.12.14",

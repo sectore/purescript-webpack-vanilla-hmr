@@ -2,10 +2,9 @@ module App where
 
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Exception (EXCEPTION)
-import Control.Monad.Eff
 import DOM (DOM)
 import Signal.Channel (CHANNEL)
-import Prelude(bind, return)
+import Prelude(bind, pure)
 import Pux (App, start, fromSimple, renderToDOM)
 import App.Counter (State, Action, update, view)
 
@@ -20,4 +19,4 @@ main state = do
     , inputs: []
     }
   renderToDOM "#app" app.html
-  return app
+  pure app

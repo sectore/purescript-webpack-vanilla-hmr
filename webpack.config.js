@@ -2,7 +2,6 @@
 
 var path = require('path');
 var webpack = require('webpack');
-var PurescriptWebpackPlugin = require('purescript-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -25,20 +24,6 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [
-    new PurescriptWebpackPlugin({
-      src: [
-        'bower_components/purescript-*/src/**/*.purs',
-        'src/**/*.purs'
-      ],
-      ffi: [
-        'bower_components/purescript-*/src/**/*.js'
-      ],
-      bundle: false,
-      psc: 'psa',
-      pscArgs: {
-        sourceMaps: true
-      }
-    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       inject: 'body',
@@ -57,7 +42,17 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, loader: 'source-map-loader', exclude: /node_modules|bower_components/ },
-      { test: /\.purs$/, loader: 'purs-loader' }
+      , {  
+        test: /\.purs$/,
+        loader: 'purs-loader',
+        exclude: /node_modules/,
+        
+        query: {
+          psc: 'psa',
+          src: ['bower_components/purescript-*/src/**/*.purs', 'src/**/*.purs'],
+          ffi: ['bower_components/purescript-*/src/**/*.js', 'src/**/*.js'],
+        }
+      }
     ]
   },
   devServer: {
