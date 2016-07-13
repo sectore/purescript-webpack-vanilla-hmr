@@ -2,7 +2,6 @@
 
 var path = require('path');
 var webpack = require('webpack');
-var PurescriptWebpackPlugin = require('purescript-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -15,17 +14,6 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [
-    new PurescriptWebpackPlugin({
-      src: [
-        'bower_components/purescript-*/src/**/*.purs',
-        'src/**/*.purs'
-      ],
-      ffi: [
-        'bower_components/purescript-*/src/**/*.js'
-      ],
-      bundle: false,
-      psc: 'psa'
-    }),
     new webpack.optimize.UglifyJsPlugin({
       compressor: {
         warnings: false,
@@ -44,7 +32,16 @@ module.exports = {
   ],
   module: {
     loaders: [
-      { test: /\.purs$/, loader: 'purs-loader' }
+      {
+        test: /\.purs$/,
+        loader: 'purs-loader',
+        exclude: /node_modules/,
+        query: {
+          psc: 'psa',
+          src: ['bower_components/purescript-*/src/**/*.purs', 'src/**/*.purs'],
+          ffi: ['bower_components/purescript-*/src/**/*.js', 'src/**/*.js'],
+        }
+      }
     ]
   }
 };
