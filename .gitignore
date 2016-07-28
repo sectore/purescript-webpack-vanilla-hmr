@@ -5,3 +5,4 @@ output
 .DS_Store
 typings
 npm-debug.log
+.psc-ide-port
