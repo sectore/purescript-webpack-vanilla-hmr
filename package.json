@@ -19,7 +19,14 @@
     "webpack",
     "hmr"
   ],
-  "author": "Jens Krause // email@jkrause.io",
+  "author": {
+    "name": "Jens Krause",
+    "email": "email@jkrause.io"
+  },
+  "contributors": [{
+    "name": "Kurt Harriger",
+    "email": "kurtharriger@gmail.com"
+  }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sectore/purescript-webpack-vanilla-hmr/issues"
