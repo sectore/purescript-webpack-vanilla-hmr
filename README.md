@@ -1,6 +1,6 @@
 # purescript-webpack-vanilla-hmr
 
-Simple + fast build of **[PureScript](purescript.org)** with **[webpack](https://webpack.github.io)** and **[Vanilla Hot Module Replacement (HMR)](https://webpack.github.io/docs/hot-module-replacement.html)**. No [Pulp](https://github.com/bodil/pulp), no [Gulp](http://gulpjs.com/) or anything else - just [webpack](https://webpack.github.io/).
+Simple + fast build of **[PureScript](purescript.org)** with **[Webpack 2](https://webpack.js.org/)** and **[Vanilla Hot Module Replacement (HMR)](https://webpack.github.io/docs/hot-module-replacement.html)**. No [Pulp](https://github.com/bodil/pulp), no [Gulp](http://gulpjs.com/) or anything else - just [webpack](https://webpack.github.io/).
 
 ![screenshot](./ps_hmr.gif)
 
@@ -14,10 +14,13 @@ Why not the using the same stuff for building PureScript application today?
 
 ## Installation
 
+It's recommended to use [yarn](https://yarnpkg.com/)
+
+```bash
+yarn install
+yarn start
 ```
-npm i
-npm start
-```
+
 Open http://localhost:3000/
 
 ## Acknowledge
