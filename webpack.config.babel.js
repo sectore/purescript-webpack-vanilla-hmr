@@ -3,7 +3,7 @@ const path = require('path');
 const {
   DefinePlugin,
   ProgressPlugin,
-  NoErrorsPlugin
+  NoEmitOnErrorsPlugin
 } = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -44,7 +44,7 @@ module.exports = {
     }),
     new NamedModulesPlugin(),
     ...(isProd ? [
-      new NoErrorsPlugin(),
+      new NoEmitOnErrorsPlugin(),
       new UglifyJsPlugin({
         beautify: false,
         comments: false
@@ -75,7 +75,8 @@ module.exports = {
         query: {
           psc: 'psa',
           src: ['bower_components/purescript-*/src/**/*.purs', 'src/**/*.purs'],
-          ffi: ['bower_components/purescript-*/src/**/*.js', 'src/**/*.js'],
+          bundle: isProd,
+          watch: !isProd
         }
       },
       { test: /\.css$/, exclude: /\.useable\.css$/, loader: "style!css" },
