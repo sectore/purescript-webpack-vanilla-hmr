@@ -1,17 +1,21 @@
 module App where
 
+import Prelude
 import Control.Monad.Eff (Eff)
-import Prelude(bind, pure)
-import Pux (App, CoreEffects, start, fromSimple, renderToDOM)
-import App.Counter (State, Action, update, view)
+import Pux (App, CoreEffects, start)
+import Pux.DOM.Events (DOMEvent)
+import Pux.Renderer.React (renderToDOM)
+import App.Counter (Action, State, update, view)
 
-main :: forall e. State -> Eff (CoreEffects e) (App State Action)
+type WebApp = App (DOMEvent -> Action) Action State
+
+main :: forall e . State -> Eff (CoreEffects e) WebApp
 main state = do
   app <- start
     { initialState: state
-    , update: fromSimple update
-    , view: view
+    , foldp: update
+    , view
     , inputs: []
     }
-  renderToDOM "#app" app.html
+  _ <- renderToDOM "#app" app.markup app.input
   pure app

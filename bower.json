@@ -22,6 +22,6 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "purescript-pux": "^7.0.0"
+    "purescript-pux": "^12.0.0"
   }
 }

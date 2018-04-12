@@ -1,12 +1,12 @@
-var App = require('./App.purs');
-var initialState = require('./Counter.purs').initialState;
+import App from './App.purs';
+import {initialState} from './Counter.purs';
 // vanilla hot module reloading
-// @see https://webpack.github.io/docs/hot-module-replacement.html
+// @see https://webpack.js.org/guides/hot-module-replacement/
 if(module.hot) {
-	var app = App.main(window.lastState || initialState)();
+	const app = App.main(window.__puxLastState || initialState)();
 	// don't lose state while HMR
-	app.state.subscribe(function (state) {
-	 window.lastState = state;
+	app.state.subscribe(function (st) {
+		window.__puxLastState = st;
 	});
 	module.hot.accept();
 } else {

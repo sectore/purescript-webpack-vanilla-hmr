@@ -1,6 +1,6 @@
 # purescript-webpack-vanilla-hmr
 
-Simple + fast build of **[PureScript](purescript.org)** with **[Webpack 2](https://webpack.js.org/)** and **[Vanilla Hot Module Replacement (HMR)](https://webpack.github.io/docs/hot-module-replacement.html)**. No [Pulp](https://github.com/bodil/pulp), no [Gulp](http://gulpjs.com/) or anything else - just [webpack](https://webpack.github.io/).
+Simple + fast build of **[PureScript](purescript.org)** with **[Webpack](https://webpack.js.org/)** and **[Hot Module Replacement (HMR)](https://webpack.js.org/guides/hot-module-replacement/)**. No [Pulp](https://github.com/bodil/pulp), no [Gulp](http://gulpjs.com/) or anything else - just [webpack](https://webpack.github.io/).
 
 ![screenshot](./ps_hmr.gif)
 
@@ -11,6 +11,10 @@ Simple + fast build of **[PureScript](purescript.org)** with **[Webpack 2](https
 _Quote by Dan Abranov (Creator of [Redux](redux.js.org), [React Hot Loader](https://github.com/gaearon/react-hot-loader) etc.)_
 
 Why not the using the same stuff for building PureScript application today?
+
+## Do I need this to run `Pux` with `HMR`?
+
+To demonstrate the feature of `HMR` [the example app](./src/App.purs) uses [`Pux`](https://github.com/alexmingoia/purescript-pux) under the hood. However, Pux's `starter-app` [has already merged](https://github.com/alexmingoia/pux-starter-app/pull/5) the HMR solution from here. So you don't need to implement this `HMR` _thing_ into your Pux app.  
 
 ## Installation
 
